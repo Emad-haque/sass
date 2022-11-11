@@ -1,0 +1,41 @@
+.footer-area{
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+    .contact{
+       // margin-bottom: 25px;
+       font-weight: 600;
+       p{
+        border-bottom: 1px solid $primary_color;
+       }
+       &:before{
+        content: "";
+        position: absolute;
+        width: 2px;
+        height:y(100%) ;
+        background-color: $primary_color;
+       }
+        i{
+            margin-bottom: 20px;
+            margin-right: 15px;
+            margin-top: 20px;
+        }
+    }
+    .social-media p{
+        margin-bottom: 20px;
+        font-weight: 800;
+    }
+    .sm-icon{
+        a{
+            i{
+                color: #fff;
+                padding: 10px;
+                margin: 10px;
+                background-color: $primary_color;
+                &:hover{
+                    background-color: #3b5998;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    .row{
+        display: flex;
+        flex-wrap:wrap;
+        margin-right: 0 -15px;
+    }
+}
+
+$grid_columns: 12;
+$grid_xxl_breakpoint: 1400px;
+$grid_xl_breakpoint: 120px;
+$grid_lg_breakpoint: 992px;
+$grid_md_breakpoint: 768px;
+
+
+@media only screen and(min-width:$grid_md_breakpoint){
+    .container{
+        width: 750px;
+        padding: 0 15px;
+    }
+    @for $i from 1 through 12{
+        .col-md-#{$i}{
+            width: (100/12) * $i * 1%;
+            padding: 0 15px;
+        }
+    }
+}
+
+@media only screen and(min-width:$grid_lg_breakpoint){
+    .container{
+        width: 970px;
+    }
+    @for $i from 1 through 12{
+        .col-lg-#{$i}{
+            width: (100/12) * $i * 1%;
+        }
+    }
+}
+
+@media only screen and(min-width:$grid_xl_breakpoint){
+    .container{
+        width: 1140px;
+    }
+    @for $i from 1 through 12{
+        .col-xl-#{$i}{
+            width: (100/12) * $i * 1%;
+        }
+    }
+}
+
+@media only screen and(min-width:$grid_xxl_breakpoint){
+    .container{
+        width: 1320px;
+    }
+    @for $i from 1 through 12{
+        .col-xxl-#{$i}{
+            width: (100/12) * $i * 1%;
+        }
+    }
+}

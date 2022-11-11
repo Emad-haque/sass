@@ -1,0 +1,137 @@
+@import 'variable';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: $text_color;
+    transition: 0.3s;
+}
+ul{
+    list-style: none;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+.h-100{
+    height: 100vh;
+}
+.bg{
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+    &:before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        opacity: .8;
+        background-color: $opacity_color;
+        z-index: -1;
+    }
+}
+
+.gutter .col-md-4{
+    padding: 0;
+}
+
+//Button
+@mixin btn {
+    color: $white;
+    padding: 10px 30px;
+    border-radius: 3px;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-block;
+}
+.btn-box{
+    background-color: $primary_color;
+    @include btn;
+    &:hover{
+        background-color: $btn_hover_color;
+    }
+}
+.btn-border{
+    border: 1px solid $primary_color;
+    @include btn;
+    &:hover{
+        background-color: $btn_hover_color;
+        border-color: $btn_hover_color;
+    }
+}
+
+//Margin & padding
+@for $i from 1 through 20{
+    .pt-#{$i * 5}{
+        padding-top: $i * 5px;
+    }
+    .pb-#{$i * 5}{
+        padding-bottom: $i * 5px;
+    }
+    .mt-#{$i * 5}{
+        margin-top: $i * 5px;
+    }
+    .mb-#{$i * 5}{
+        margin-bottom: $i * 5px; 
+    }
+    .ml-#{$i * 5}{
+        margin-left: $i * 5px;
+    }
+    .mr-#{$i * 5}{
+        margin-right: $i * 5px;
+    }
+    .fs-#{$i * 5}{
+        font-size: $i * 5px;
+    }
+}
+
+//CSS Flex
+
+$flex: flex, inline-flex;
+@each $i in $flex{
+    .d-#{$i}{
+        display: $i;
+    }
+}
+$direction: row, column;
+@each $i in $direction{
+    .flex-direction-#{$i}{
+        flex-direction: $i;
+    }
+}
+$justify: start, end, center, space-around, space-between;
+@each $i in $justify{
+    .justify-content-#{$i}{
+        justify-content: $i;
+    }
+}
+$align-items: start, center, end, stretch, baseline;
+@each $i in $align-items{
+    .align-items-#{$i}{
+        align-items: $i;
+    }
+}
+$align: left, right, center, justify;
+@each $i in $align{
+    .text-#{$i}{
+        text-align: $i;
+    }
+}
+$transform: uppercase, lowercase, capitalize;
+@each $i in $transform{
+    .text-#{$i}{
+        text-transform: $i;
+    }
+}

@@ -1,0 +1,51 @@
+.prices-area{
+    background-color: $bg_gray;
+    .single-price{
+        background-color: #fff;
+        padding: 30px 20px;
+        border: 1px solid #ddd;
+        position: relative;
+        overflow: hidden;
+        .price-head{
+            h5{
+                text-transform: uppercase;
+                font-size: 22px;
+            }
+            h4{
+                font-size: 40px;
+                margin-top: 20px;
+            }
+        }
+        .price-features{
+            margin: 30px 0;
+            ul{
+                li{
+                    border-bottom: 1px #ddd dashed;
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+                    &:last-child{
+                        border-bottom: 0;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+        &.active{
+            border: 5px solid $primary_color;
+            &:after{
+                content: "";
+                position: absolute;
+                right: -40px;
+                top: 20px;
+                background-color: $primary_color;
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: 700;
+                padding: 10px 70px;
+                transform: rotate(40deg);
+            }
+        }
+    }
+    
+}

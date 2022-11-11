@@ -1,0 +1,22 @@
+.logo{
+    a{
+        border: 1px solid #33333333;
+        font-weight: 700;
+        padding: 10px 25px;
+        display: inline-block;
+    }
+}
+
+.menu{
+    ul{
+        li{
+            a{
+                font-weight: 600;
+                color: $text_color;
+                &:hover{
+                    color: $link_hover_color;
+                }
+            }
+        }
+    }
+}

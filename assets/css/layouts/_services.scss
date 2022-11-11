@@ -1,0 +1,23 @@
+.services-area{
+    background-color: $bg_gray;
+    .single-service{
+        background-color: $white;
+        background-color: $white;
+        padding: 30px 20px;
+        margin-bottom: 30px;
+        &:hover i{
+            border-radius: 50%;
+            transition: 0.3s
+        }
+    }
+    .single-service i{
+        font-weight: 400;
+        font-size: 15px;
+        padding: 15px 15px;
+        background-color: $primary_color;
+        color: $white;
+    }
+    h4{
+        margin: 10px 0;
+    }
+}
